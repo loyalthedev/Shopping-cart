@@ -1,4 +1,27 @@
 {% extends 'base.html' %}
+{% load static tailwind_tags %}
+{% tailwind_css %}
 {% block main %}
-    <h1 class="text-red-500">I'm the the home page, don't whine me!!</h1>
+    <section class="hero-section bg-pri rounded-sm py-5 flex">
+        <div class="text-content">
+            <h1 class="text-green-900 text-2xl lg:text-5xl font-medium max-w-lg my-3">
+                Grab Up to 50% Off On Selected Headphones
+            </h1>
+            <button class="bg-green-900 text-white px-4 py-3 rounded-full">Buy Now</button>
+        </div>
+        <div class="image-content pt-3">
+            <div class="h-36 bg-amber-200"></div>
+        </div>
+    </section>
+
+    
+    <section class="flex gap-3 mx-auto my-10">
+        {% for h in headphones %}
+        <div class="h-36 rounded-lg bg-green-400 py-6 px-3">
+            <img src="" alt="">
+            <p class="text-2xl">{{h.name}}</p>
+        </div>
+        {% endfor %}
+    </section>
+    
 {% endblock %}

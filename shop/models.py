@@ -22,6 +22,9 @@ class Headphones(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = ('headphones')
+
 # class Review(models.Model):
 #     headphones = models.ForeignKey(Headphones, on_delete=models.CASCADE, related_name='reviews')
 #     author_name = models.CharField(max_length=100)
