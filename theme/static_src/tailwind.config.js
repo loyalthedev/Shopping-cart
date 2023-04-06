@@ -42,7 +42,14 @@ module.exports = {
         // '../../**/*.py'
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                pri: '#f9f2e8'
+            },
+            fontFamily: {
+                openSans: ['Open Sans', 'sans-serif']
+            }
+        },
     },
     plugins: [
         /**
